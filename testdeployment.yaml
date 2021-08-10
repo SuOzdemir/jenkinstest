@@ -23,6 +23,8 @@ spec:
       labels:
         app: jenkinstest
     spec:
+      imagePullSecrets:
+        - name: sumeyradockerhub
       containers:
       - image: sueda123/k8stest:jenkintest
         imagePullPolicy: Always
