@@ -35,7 +35,7 @@ pipeline {
                       sh '''
                       echo "${PROFILE_NAME}"
                       docker login -u "$USERNAME" -p "$PASSWORD"
-                      docker build -f Dockerfile -t sueda123/k8stest:jenkintest
+                      docker build . -t sueda123/k8stest:jenkintest
                       docker push sueda123/k8stest:jenkintest
                       docker logout
                       '''
