@@ -28,6 +28,9 @@ spec:
       containers:
       - image: sueda123/k8stest:jenkintest
         imagePullPolicy: Always
+        ports:
+          - containerPort: 8080
+            protocol : TCP
         name: jenkinstest
         resources: {}
         terminationMessagePath: /dev/termination-log
